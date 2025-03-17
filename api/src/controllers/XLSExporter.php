@@ -7,5 +7,10 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class XLSExporter
 {
-    public static function exportXls(Request $request, Response $response, array $args) {}
+    public static function exportXls(Request $request, Response $response, array $args)
+    {
+        $name = $args['name'];
+        $response->getBody()->write("Привет, $name!");
+        return $response;
+    }
 }

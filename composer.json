@@ -1,0 +1,40 @@
+{
+    "name": "seogravity/service",
+    "description": "Seogravity API",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Causelof",
+            "email": "kan@seo-gravity.ru"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "8.3"
+        },
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+      },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+          "Seogravity\\": "lib/Seogravity/",
+          "Api\\": "api/src/"
+        }
+      },
+      "require-dev": {
+    
+      },
+      "scripts": {
+            "test": "phpunit"
+        },
+      "require": {
+        "slim/slim": "^4.0",
+        "slim/psr7": "^1.7",
+        "phpoffice/phpspreadsheet": "^1.8",
+        "mpdf/mpdf": "^8.2",
+        "dompdf/dompdf": "^3.1"
+    }
+}
